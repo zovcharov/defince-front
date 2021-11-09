@@ -1,0 +1,74 @@
+.top-token-row-card {
+  width: 100%;
+  height: 86px;
+  padding: 0 24px;
+  background-color: #121721;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+
+  &:hover {
+    -webkit-transform: scale(1.015);
+    -ms-transform: scale(1.015);
+    transform: scale(1.015);
+  }
+
+  &__header {
+    margin-bottom: 11px;
+    display: flex;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, .7);
+  }
+
+  &__price-change {
+    width: 92px;
+    max-width: 92px;
+    padding: 15px 5px;
+    text-align: center;
+    height: 46px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 10px;
+    white-space: nowrap;
+    margin-left: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+
+
+    &--up {
+      background: #2BB596;
+    }
+
+    &--down {
+      background: #E84B4B;
+    }
+
+    &--na {
+      background: #747474;
+    }
+  }
+}

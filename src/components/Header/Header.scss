@@ -1,0 +1,28 @@
+.header {
+  height: 100px;
+  background: #0D1318;
+  position: relative;
+  box-shadow: 0 0 6px 2px rgba(42, 42, 42, .2);
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__header-logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__header-logo-icon {
+    height: 60px;
+  }
+
+  &__header-logo-text {
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    color: #fff;
+    font-family: Impact, sans-serif;
+  }
+}

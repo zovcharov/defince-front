@@ -1,0 +1,30 @@
+.tokens-list-type {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  position: relative;
+
+  background: #2B2B2B;
+  border-radius: 10px;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #fff;
+  border: 2px solid transparent;
+
+  &:not(&:last-child) {
+    margin-right: 5px;
+  }
+
+  &--active {
+    background:
+      linear-gradient(#2B2B2B, #2B2B2B) padding-box,
+      linear-gradient(#4B0BD5, #2B2B2B) border-box;
+    border-radius: 10px;
+  }
+}

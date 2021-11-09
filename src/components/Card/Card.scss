@@ -1,0 +1,14 @@
+.card {
+  background: #1B1C2C;
+  border-radius: 20px;
+  padding: 30px 20px;
+
+  &__header {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+}

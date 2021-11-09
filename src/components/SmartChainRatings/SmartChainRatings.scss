@@ -1,0 +1,17 @@
+.smart-chain-rating {
+  overflow-y: auto;
+
+  &__tokens-lists {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__tokens {
+    max-height: 370px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+}

@@ -1,0 +1,26 @@
+.token-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+
+  &--size {
+    &-xs {
+      width: 12px;
+      height: 12px;
+      font-size: 8px;
+    }
+
+    &-s {
+      width: 16px;
+      height: 16px;
+      font-size: 10px;
+    }
+
+    &-m {
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+    }
+  }
+}
