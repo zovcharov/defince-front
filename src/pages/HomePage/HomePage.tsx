@@ -2,14 +2,20 @@ import React from 'react';
 
 import PageWrapper from '../../components/PageWrapper/PageWrapper';
 import SmartChainRatings from '../../components/SmartChainRatings/SmartChainRatings';
+import FavouriteTokens from '../../components/FavouriteTokens/FavouriteTokens';
+
+import { FavouriteTokensContext } from '../../contexts/favouriteTokensContext';
 
 import './HomePage.scss';
 
 const HomePage = (): JSX.Element => (
   <PageWrapper>
-    <div className="home-page">
-      <SmartChainRatings />
-    </div>
+    <FavouriteTokensContext>
+      <div className="home-page">
+        <FavouriteTokens />
+        <SmartChainRatings />
+      </div>
+    </FavouriteTokensContext>
   </PageWrapper>
 );
 

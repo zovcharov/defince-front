@@ -9,11 +9,13 @@ import {
   getHourTransactionTokens,
   getHourVolumeTokens,
   getNewTokens
-} from '../../api/controllers/topTokensController';
+} from '../../api/controllers/topTokens.controller';
 
-import './SmartChainRatings.scss';
 import TopTokenRowCard from '../TopTokenRowCard/TopTokenRowCard';
 import Loader from '../../uikit/Loader/Loader';
+import { FavouriteTokensContextConsumer } from '../../contexts/favouriteTokensContext';
+
+import './SmartChainRatings.scss';
 
 const topTokenSettings: {
   [key: string]: {
@@ -72,13 +74,22 @@ const SmartChainRatings = (): JSX.Element => {
           />
         ))}
       </div>
-      <Loader isLoading={isFetching}>
-        <div className="smart-chain-rating__tokens">
-          {tokens.map((token) => (
-            <TopTokenRowCard token={token} />
-          ))}
-        </div>
-      </Loader>
+      <FavouriteTokensContextConsumer>
+        {({ toggleFavourite, isInFavourite }) => (
+          <Loader isLoading={isFetching}>
+            <div className="smart-chain-rating__tokens">
+              {tokens.map((token) => (
+                <TopTokenRowCard
+                  key={token.symbol}
+                  token={token}
+                  isFavourite={isInFavourite(token.symbol)}
+                  onToggleFavourite={toggleFavourite}
+                />
+              ))}
+            </div>
+          </Loader>
+        )}
+      </FavouriteTokensContextConsumer>
     </Card>
   )
 }

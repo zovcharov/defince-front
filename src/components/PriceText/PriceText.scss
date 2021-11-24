@@ -1,0 +1,11 @@
+.price-text {
+  font-weight: 500;
+
+  &--up {
+    color: #2BB596;
+  }
+
+  &--down {
+    color: #E84B4B;
+  }
+}

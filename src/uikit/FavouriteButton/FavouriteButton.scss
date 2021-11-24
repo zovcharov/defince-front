@@ -1,0 +1,45 @@
+.favourite-button {
+  display: inline-block;
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+    overflow:visible;
+
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 3;
+  }
+
+  &__star {
+    fill:transparent;
+  }
+
+  &__star-ex {
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    transform-box: border-box;
+    fill: #D9A72C;
+    opacity: 1;
+    transition: none;
+  }
+
+  &--active {
+    .favourite-button__svg {
+      stroke: #D9A72C;
+    }
+
+    .favourite-button__star {
+      fill: #D9A72C;
+      transition: fill .4s ease .2s;
+    }
+
+    .favourite-button__star-ex {
+      transform: scale(1.8);
+      opacity: 0;
+      transition: transform, opacity;
+      transition-duration: .6s, .4s;
+      transition-delay: 0s, .2s;
+    }
+  }
+}

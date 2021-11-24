@@ -17,6 +17,10 @@ const PATHS = [
     title: 'Dex trades',
     path: '/dex-trades',
   },
+  {
+    title: 'Wallet',
+    path: '/wallet',
+  },
 ]
 
 const HeaderNavigation = (): JSX.Element => {
