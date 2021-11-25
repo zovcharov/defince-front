@@ -30,3 +30,8 @@ export type Token = {
   description?: string;
   links?: TokenLink[];
 };
+
+export type FavouriteTokensStoreType = {[key: string]: {
+  address: string;
+  name: string;
+}};

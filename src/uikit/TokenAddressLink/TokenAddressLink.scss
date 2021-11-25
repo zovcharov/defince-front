@@ -1,0 +1,31 @@
+.token-address-link {
+  width: 105px;
+  height: 30px;
+  background: #2C2C2C;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #D39527;
+
+    .token-address-link__address {
+      color: #fff;
+    }
+  }
+
+  &__address {
+    width: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.152353px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

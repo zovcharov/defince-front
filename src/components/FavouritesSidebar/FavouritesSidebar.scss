@@ -1,0 +1,32 @@
+.favourites-sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 440px;
+  top: 0;
+  right: 0;
+  padding: 20px 0;
+  overflow-y: auto;
+
+  background-color: #1B1C2C;
+  z-index: 1;
+
+  &__header {
+    font-size: 26px;
+    color: #D39527;
+    padding: 0 25px 25px 25px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+  }
+
+  &__close-btn {
+    margin-right: 10px;
+    height: 30px;
+  }
+
+  &__list {
+    padding: 10px 15px;
+  }
+}

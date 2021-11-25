@@ -33,4 +33,21 @@
       }
     }
   }
+
+  &__favourites {
+    cursor: pointer;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #D9A72C;
+    }
+
+    &:hover {
+      svg {
+        stroke: #ffd400;
+        fill: #ffd400;
+      }
+    }
+  }
 }

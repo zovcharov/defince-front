@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from 'react';
 
 import omit from '../utils/omit';
+import {FavouriteTokensStoreType} from '../types/tokens.types';
 
 const { Provider, Consumer } = React.createContext({
   favouriteTokens: {},
-  addToFavourite: (symbol: string, address: string) => {},
+  addToFavourite: (symbol: string, address: string, name: string) => {},
   removeFromFavourite: (symbol: string) => {},
-  toggleFavourite: (symbol: string, address: string) => {},
+  toggleFavourite: (symbol: string, address: string, name: string) => {},
   isInFavourite: (symbol: string): boolean => false,
 });
 
 const FAVOURITES_TOKENS_STORE_KEY = 'favouriteTokens'
-
-type FavouriteTokensStoreType = {[key: string]: string};
 
 const FavouriteTokensContext = ({ children }: { children: React.ReactElement }) => {
   const [favouriteTokens, setFavouriteTokens] = useState<FavouriteTokensStoreType>(
@@ -31,10 +30,13 @@ const FavouriteTokensContext = ({ children }: { children: React.ReactElement }) 
     window.localStorage.setItem(FAVOURITES_TOKENS_STORE_KEY, JSON.stringify(favouriteTokens));
   }, [favouriteTokens]);
 
-  const addToFavourite = (symbol: string, address: string) => {
+  const addToFavourite = (symbol: string, address: string, name: string) => {
     setFavouriteTokens((prevState: FavouriteTokensStoreType) => ({
       ...prevState,
-      [symbol]: address,
+      [symbol]: {
+        address,
+        name,
+      },
     }));
   };
 
@@ -42,11 +44,11 @@ const FavouriteTokensContext = ({ children }: { children: React.ReactElement }) 
     setFavouriteTokens((prevState: FavouriteTokensStoreType) => omit(prevState, [symbol]));
   };
 
-  const toggleFavourite = (symbol: string, address: string) => {
+  const toggleFavourite = (symbol: string, address: string, name: string) => {
     if (isInFavourite(symbol)) {
       removeFromFavourite(symbol);
     } else {
-      addToFavourite(symbol, address);
+      addToFavourite(symbol, address, name);
     }
   };
 

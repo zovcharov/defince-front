@@ -15,7 +15,7 @@ const TopTokenRowCard = ({
 }: {
   token:TopToken;
   isFavourite: boolean;
-  onToggleFavourite: (symbol: string, address: string) => void;
+  onToggleFavourite: (symbol: string, address: string, name: string) => void;
 }): JSX.Element => {
   const cnPriceChange = cn('top-token-row-card__price-change', {
     'top-token-row-card__price-change--up': token.isUp,
@@ -26,7 +26,7 @@ const TopTokenRowCard = ({
   const dayPriceChange = token?.dayPriceChange || 0;
 
   const handleToggleFavourite = () => {
-    onToggleFavourite(token.symbol, token.address);
+    onToggleFavourite(token.symbol, token.address, token.name);
   };
 
   return (
