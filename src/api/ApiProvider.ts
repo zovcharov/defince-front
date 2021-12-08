@@ -20,11 +20,9 @@ class ApiProvider {
     return ApiProvider.instance;
   }
 
-  Get(controller: string, param?: string, data?: {[key: string]: any}) {
-    return axios({
-      method: 'get',
-      url: `http://${this.apiUrl}/api/${controller}/${param}`,
-      data,
+  Get(controller: string, param?: string, data: {[key: string]: any} = {}) {
+    return axios.get(`http://${this.apiUrl}/api/${controller}/${param}`, {
+      params: data,
     })
       .then(({ data }) => data)
   }

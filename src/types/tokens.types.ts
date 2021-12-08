@@ -13,6 +13,13 @@ export type TokenLink = {
   url?: string;
 }
 
+export type SearchToken = {
+  address: string,
+  name: string,
+  symbol: string,
+  isUp?: boolean
+}
+
 export type Token = {
   address: string;
   name?: string;
