@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/defince-front/static/css/main.2c4ddea2.chunk.css",
+    "main.js": "/defince-front/static/js/main.fed6e9bd.chunk.js",
+    "main.js.map": "/defince-front/static/js/main.fed6e9bd.chunk.js.map",
+    "runtime-main.js": "/defince-front/static/js/runtime-main.37dac37d.js",
+    "runtime-main.js.map": "/defince-front/static/js/runtime-main.37dac37d.js.map",
+    "static/js/2.93ac7ee7.chunk.js": "/defince-front/static/js/2.93ac7ee7.chunk.js",
+    "static/js/2.93ac7ee7.chunk.js.map": "/defince-front/static/js/2.93ac7ee7.chunk.js.map",
+    "static/js/3.26895d1d.chunk.js": "/defince-front/static/js/3.26895d1d.chunk.js",
+    "static/js/3.26895d1d.chunk.js.map": "/defince-front/static/js/3.26895d1d.chunk.js.map",
+    "index.html": "/defince-front/index.html",
+    "static/css/main.2c4ddea2.chunk.css.map": "/defince-front/static/css/main.2c4ddea2.chunk.css.map",
+    "static/js/2.93ac7ee7.chunk.js.LICENSE.txt": "/defince-front/static/js/2.93ac7ee7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37dac37d.js",
+    "static/js/2.93ac7ee7.chunk.js",
+    "static/css/main.2c4ddea2.chunk.css",
+    "static/js/main.fed6e9bd.chunk.js"
+  ]
+}
