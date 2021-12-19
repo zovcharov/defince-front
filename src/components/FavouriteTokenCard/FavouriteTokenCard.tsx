@@ -8,9 +8,10 @@ import TokenIcon from '../../uikit/TokenIcon/TokenIcon';
 import PriceText from '../PriceText/PriceText';
 import { getShortNumber } from '../../utils/numberFormat';
 
-import './FavouriteTokenCard.scss';
 import Display from '../Display/Display';
 import TokenAddressLink from '../../uikit/TokenAddressLink/TokenAddressLink';
+
+import './FavouriteTokenCard.scss';
 
 const FavouriteTokenCard = ({
   address,

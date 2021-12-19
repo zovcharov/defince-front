@@ -9,5 +9,6 @@ const config: ConfigType = {
 }
 
 export const apiUrl = `${config.apiHost}:${config.apiPort}`;
+export const dbUrl = 'https://dogefinance-dd6c8-default-rtdb.firebaseio.com/';
 
 export default config;

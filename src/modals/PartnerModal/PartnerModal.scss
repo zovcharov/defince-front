@@ -1,0 +1,109 @@
+@mixin svg-colors-path ($color) {
+  circle, rect, path {
+    &[stroke] {
+      stroke: $color;
+    }
+
+    &[fill] {
+      fill: $color;
+    }
+  }
+}
+
+.partner-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  padding: 20px;
+
+  &__logo {
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+  }
+
+  &__name {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    color: #fff;
+  }
+
+  &__desc {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  &__badges {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__badge {
+    background-color: #D9A72C;
+    padding: 10px 10px 10px 15px;
+    border-radius: 5px;
+    color: #ffffff;
+    position: relative;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #F3BA2F;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: 5px;
+      width: 2px;
+      background: #1B1C2C;
+    }
+
+    &:not(&:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__social {
+    text-decoration: none;
+
+    &:not(&:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      animation: bounce 1s linear infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform:     translateY(0);
+    transform:         translateY(0)
+  }
+  40% {
+    -webkit-transform: translateY(-6px);
+    -ms-transform:     translateY(-6px);
+    transform:         translateY(-6px)
+  }
+  60% {
+    -webkit-transform: translateY(-3px);
+    -ms-transform:     translateY(-3px);
+    transform:         translateY(-3px)
+  }
+}
